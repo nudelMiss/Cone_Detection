@@ -22,7 +22,7 @@ from utils.torch_utils import select_device, time_sync
 
 @torch.no_grad()
 def run(weights=ROOT / 'yolov5s.pt',  # model.pt path(s)
-        source=ROOT / '../fsd1.mp4',  # file/dir/URL/glob, 0 for webcam
+        source=ROOT / '../dataset/test/images',  # file/dir/URL/glob, 0 for webcam
         data=ROOT / '../dataset/dataset.yaml',  # dataset.yaml path
         imgsz=(640, 640),  # inference size (height, width)
         conf_thres=0.25,  # confidence threshold
