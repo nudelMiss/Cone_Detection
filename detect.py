@@ -21,12 +21,12 @@ from utils.plots import Annotator, colors, save_one_box
 from utils.torch_utils import select_device, time_sync
 
 @torch.no_grad()
-def run(weights=ROOT / 'yolov5s.pt',  # model.pt path(s)
-        source=ROOT / '../dataset/test/images',  # file/dir/URL/glob, 0 for webcam
+def run(weights=ROOT / './runs/train/exp17/weights/best.pt',  # model.pt path(s)
+        source=ROOT / '../fsd1.mp4',  # file/dir/URL/glob, 0 for webcam
         data=ROOT / '../dataset/dataset.yaml',  # dataset.yaml path
-        imgsz=(640, 640),  # inference size (height, width)
-        conf_thres=0.25,  # confidence threshold
-        iou_thres=0.45,  # NMS IOU threshold
+        imgsz=(1024, 1024),  # inference size (height, width)
+        conf_thres=0.3,  # confidence threshold
+        iou_thres=0.50,  # NMS IOU threshold
         max_det=1000,  # maximum detections per image
         device='',  # cuda device, i.e. 0 or 0,1,2,3 or cpu
         view_img=False,  # show results
